@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-deployment-blue
+  name: k8s-deployment-green
 spec:
   # A deployment's specification really only 
   # has a few useful options
@@ -27,11 +27,11 @@ spec:
       # This is used in the deployment selector.
       labels:
         app: k8s
-        role: blue
+        role: green
     spec:
       containers: # An array of containers that should be run in this Pod.
       - name: k8s-app #The name of the container.
-        image: anshulfareye/assignment1:0.0.1 # The container image to run
+        image: anshulfareye/assignment1:0.0.2 # The container image to run
         ports: #Ports to expose on the container.
         - containerPort: 8080
         readinessProbe:
