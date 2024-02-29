@@ -8,7 +8,7 @@ public class MyController {
 
     @GetMapping
     public String index(){
-        return "Kubernetes Assignment Day1";
+        return "Kubernetes Assignment Day2- second tag";
     }
 
 }
